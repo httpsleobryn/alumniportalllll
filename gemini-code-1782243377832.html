@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>USC Alumni Portal | University of San Carlos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#a7c8ff",
+                        "pure-white": "#FFFFFF",
+                        "on-secondary-container": "#6e4900",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#aff2c0",
+                        "on-surface-variant": "#404941",
+                        "on-tertiary-fixed-variant": "#1f477b",
+                        "inverse-primary": "#94d5a5",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#ffddaf",
+                        "surface-container-highest": "#e4e2e1",
+                        "on-tertiary-fixed": "#001b3c",
+                        "surface-container-high": "#eae8e7",
+                        "surface-container-low": "#f6f3f2",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#94d5a5",
+                        "on-primary-fixed": "#00210e",
+                        "on-tertiary-container": "#89ade7",
+                        "heritage-red": "#A31F34",
+                        "secondary-fixed-dim": "#ffba43",
+                        "surface-tint": "#2b6a43",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#feb637",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#164073",
+                        "on-secondary-fixed": "#281800",
+                        "on-secondary-fixed-variant": "#614000",
+                        "tertiary": "#002a55",
+                        "on-surface": "#1b1c1c",
+                        "on-error": "#ffffff",
+                        "surface-container": "#f0eded",
+                        "outline-variant": "#c0c9bf",
+                        "on-primary-container": "#79b98b",
+                        "surface-variant": "#e4e2e1",
+                        "primary-container": "#004a26",
+                        "on-primary-fixed-variant": "#0d522d",
+                        "surface-gray": "#F4F4F4",
+                        "background": "#fbf9f8",
+                        "primary": "#003117",
+                        "inverse-on-surface": "#f3f0f0",
+                        "tertiary-fixed": "#d5e3ff",
+                        "outline": "#707970",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#1b1c1c",
+                        "surface-dim": "#dcd9d9",
+                        "secondary": "#805600",
+                        "inverse-surface": "#303030",
+                        "surface-bright": "#fbf9f8",
+                        "surface": "#fbf9f8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "margin-mobile": "16px",
+                        "unit": "4px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "label-lg": ["inter"],
+                        "display-lg-mobile": ["beVietnamPro"],
+                        "headline-md": ["beVietnamPro"],
+                        "label-sm": ["inter"],
+                        "display-lg": ["beVietnamPro"],
+                        "title-lg": ["beVietnamPro"],
+                        "body-md": ["inter"],
+                        "body-sm": ["inter"],
+                        "body-lg": ["inter"],
+                        "poppins": ["Poppins", "sans-serif"],
+                        "beVietnamPro": ["Be Vietnam Pro", "sans-serif"],
+                        "inter": ["Inter", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .academic-gradient {
+            background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,49,23,0.05) 100%);
+        }
+        .hero-text-shadow {
+            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-inter selection:bg-primary-fixed-dim text-on-surface">
+
+    <header class="bg-pure-white dark:bg-surface-container-highest border-b border-outline-variant dark:border-outline fixed top-0 z-50 w-full transition-all duration-300">
+        <div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+            <div class="flex items-center gap-4">
+                <img alt="University of San Carlos Seal" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ7Wh2rBnp9OAKiDLxztzWned_5UYHeHRtiSsy0PRwrvoxi7ji7u9eqJdEe8AyUyE-jQKooKgJ0kgQ2RYD1EsV3zqatpWzq_eWwulWUHlh83L9ac6L-VJQSmSWqqVxTttrdzoR0AOWubh070NbIlI0sJgCJhRre7a-JvZw5FPCPxrSzifXbVewndJhmtdG15YGQhRJ3Fmq2oV7s92fwozgjJ-CnV948aFkdvm_tHoccZpxWOOwh-tNYlj_NzRiepCfixQEjjh7BlU">
+                <span class="text-headline-md font-beVietnamPro font-bold dark:text-primary-fixed text-primary-container">Alumni Directory Portal</span>
+            </div>
+            <nav class="hidden md:flex items-center gap-gutter">
+                <a class="text-on-surface-variant font-medium font-inter text-label-lg hover:text-primary transition-colors duration-200" href="#">Directory</a>
+                <a class="text-on-surface-variant font-medium font-inter text-label-lg hover:text-primary transition-colors duration-200" href="#">Events</a>
+                <a class="text-on-surface-variant font-medium font-inter text-label-lg hover:text-primary transition-colors duration-200" href="#">Give</a>
+                <a class="text-on-surface-variant font-medium font-inter text-label-lg hover:text-primary transition-colors duration-200" href="#">News</a>
+                <a class="text-on-surface-variant font-medium font-inter text-label-lg hover:text-primary transition-colors duration-200" href="#">About</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <button class="bg-primary text-pure-white px-6 py-2.5 rounded hover:bg-primary-container hover:text-on-primary-container transition-all active:scale-95 font-label-lg uppercase tracking-wider">
+                    Enter Portal
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <section class="relative min-h-[85vh] flex items-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDzdP8bpFHd9TD1suLz_OYTYj1c5p8oYmzLXzZY5DPKasocjvKl03cKQKJ7kDxupHxrg4paEY7bfNJurSSbTIX-KpqdE-9Zwmlbe-GhyA1ZArT4tjZrZ09DBDxYJjHGAm4JSjZBaw0lleaWqNUxoa8CwFCiWy1V79OFOi1kbtkOGFGhg6FtmpeFNCAvJa-Fruns5F0KFZ6CAlObypCkOUaWWvvbQZg6aTHUuObhzSsXdTMTe36YA9bajNJUpM0_TfXRZvLu-RzBlNs');"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/60 to-transparent"></div>
+            </div>
+            <div class="relative z-10 w-full px-margin-desktop max-w-container-max mx-auto">
+                <div class="max-w-2xl space-y-8">
+                    <h1 class="font-poppins font-extrabold text-display-lg md:text-display-lg hero-text-shadow leading-tight text-pure-white" style="text-shadow: rgba(0, 0, 0, 0.6) 0px 4px 12px;">Alumni Directory Portal</h1>
+                    <p class="font-inter text-body-lg text-pure-white/90 max-w-xl text-pure-white">
+                        Reconnect, network, and celebrate the academic excellence of our alumni community. The Portal is your lifelong gateway to the USC ecosystem.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <button class="bg-heritage-red text-pure-white px-8 py-4 rounded font-label-lg uppercase tracking-widest hover:brightness-110 transition-all shadow-lg hover:shadow-heritage-red/20 flex items-center gap-2 group">
+                            Register or Login to Portal 
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </button>
+                        <button class="bg-white/10 backdrop-blur-sm border border-white/30 text-pure-white px-8 py-4 rounded font-label-lg uppercase tracking-widest hover:bg-white/20 transition-all">
+                            View Directories
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 px-margin-desktop max-w-container-max mx-auto academic-gradient">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-stretch">
+                <div class="lg:col-span-7 group overflow-hidden relative rounded-lg border border-outline-variant bg-pure-white p-2">
+                    <div class="aspect-[16/10] overflow-hidden rounded-lg">
+                        <img alt="USC Carolinians in Uniform" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGbX9qv9s02PU40uMZkPXsmiSjdp_r2p6Q4DTETmmdwAaVPK4BjeKvOJ5dm8jrIsVRYhleLcvjBbnRnT3Y1ESzh6blRJMo6Y1mDAtWXqz9nxgOPvK28XCyhyimV_kcEd2YkujQmSFJyUmfy_VCdIVqRtWaahuh5r5aTp0Y_IlQEAIx7WYoBB4RUO5LNe3Ki14LnVF4KjnU7sx6r9o1bmmTxK14JMSIzIaGL4KxAibobeZRizV1-vVW2CPIFoTRZdn94pVFzF5qubE">
+                    </div>
+                    <div class="p-8">
+                        <h2 class="font-beVietnamPro text-headline-md text-primary mb-4">A Community of Leaders</h2>
+                        <p class="font-inter text-body-md text-on-surface-variant leading-relaxed">
+                            Since 1595, the University of San Carlos has nurtured minds that lead industries and shape nations. Our alumni network spans the globe, united by the values of Scientia, Virtus, et Devotio.
+                        </p>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 flex flex-col gap-gutter">
+                    <div class="flex-1 bg-primary p-8 rounded-lg text-pure-white shadow-xl flex flex-col justify-between">
+                        <div>
+                            <span class="material-symbols-outlined text-4xl mb-6 text-secondary-container">search</span>
+                            <h3 class="font-beVietnamPro text-title-lg mb-2">Find Your Peers</h3>
+                            <p class="text-pure-white/70 font-inter text-body-sm mb-6">Search our global directory of over 200,000 Carolinian graduates across generations.</p>
+                        </div>
+                        <div class="relative">
+                            <input class="w-full bg-white/10 border border-white/20 rounded py-3 px-4 text-body-sm focus:ring-2 focus:ring-secondary-container focus:border-transparent transition-all outline-none" placeholder="Search by name, graduation year, or college..." type="text">
+                            <button class="absolute right-3 top-1/2 -translate-y-1/2 text-secondary-container">
+                                <span class="material-symbols-outlined">chevron_right</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-gutter">
+                        <div class="bg-surface-container p-6 rounded-lg border border-outline-variant text-center transition-all hover:border-primary">
+                            <div class="text-display-lg-mobile font-poppins text-primary font-extrabold mb-1">1595</div>
+                            <div class="text-label-sm font-label-lg uppercase tracking-widest text-on-surface-variant">Founded</div>
+                        </div>
+                        <div class="bg-surface-container p-6 rounded-lg border border-outline-variant text-center transition-all hover:border-primary">
+                            <div class="text-display-lg-mobile font-poppins text-primary font-extrabold mb-1">120k+</div>
+                            <div class="text-label-sm font-label-lg uppercase tracking-widest text-on-surface-variant">Active Alumni</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-surface-gray py-20 border-y border-outline-variant">
+            <div class="px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+                <div class="flex items-center gap-6 md:w-1/2">
+                    <img alt="University Seal" class="w-32 h-auto opacity-80 filter grayscale hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ7Wh2rBnp9OAKiDLxztzWned_5UYHeHRtiSsy0PRwrvoxi7ji7u9eqJdEe8AyUyE-jQKooKgJ0kgQ2RYD1EsV3zqatpWzq_eWwulWUHlh83L9ac6L-VJQSmSWqqVxTttrdzoR0AOWubh070NbIlI0sJgCJhRre7a-JvZw5FPCPxrSzifXbVewndJhmtdG15YGQhRJ3Fmq2oV7s92fwozgjJ-CnV948aFkdvm_tHoccZpxWOOwh-tNYlj_NzRiepCfixQEjjh7BlU">
+                    <div>
+                        <h3 class="font-beVietnamPro text-headline-md text-primary mb-2">Heritage and Excellence</h3>
+                        <p class="font-inter text-body-sm text-on-surface-variant">Authenticated and secured by the USC Alumni Relations Office. Your data privacy is our institutional priority.</p>
+                    </div>
+                </div>
+                <div class="flex gap-8 md:w-1/2 justify-end">
+                    <div class="flex flex-col items-center">
+                        <span class="material-symbols-outlined text-primary mb-2">verified_user</span>
+                        <span class="text-label-sm font-label-lg uppercase text-on-surface">Secure Login</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="material-symbols-outlined text-primary mb-2">public</span>
+                        <span class="text-label-sm font-label-lg uppercase text-on-surface">Global Network</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="material-symbols-outlined text-primary mb-2">school</span>
+                        <span class="text-label-sm font-label-lg uppercase text-on-surface">Legacy Support</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 px-margin-desktop max-w-container-max mx-auto">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="font-beVietnamPro text-headline-md mb-2 text-primary-container">Alumni Headlines</h2>
+                    <p class="text-on-surface-variant font-inter">The latest updates from the Carolinian community worldwide.</p>
+                </div>
+                <a class="text-primary font-label-lg flex items-center gap-2 hover:underline" href="#">
+                    View All News
+                    <span class="material-symbols-outlined">arrow_outward</span>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <div class="bg-surface-container rounded-lg overflow-hidden border border-outline-variant transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-xl">
+                    <div class="h-56 overflow-hidden bg-surface-container-high flex justify-center items-start">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png" alt="Placeholder Image" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-label-sm font-label-lg uppercase tracking-wider text-secondary">Placeholder Tag</span>
+                        <h4 class="font-beVietnamPro font-bold text-body-lg text-primary mt-2 line-clamp-2">Placeholder Title Text</h4>
+                        <p class="font-inter text-body-sm text-on-surface-variant mt-2 line-clamp-3">placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder</p>
+                    </div>
+                </div>
+
+                <div class="bg-surface-container rounded-lg overflow-hidden border border-outline-variant transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-xl">
+                    <div class="h-56 overflow-hidden bg-surface-container-high flex justify-center items-start">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png" alt="Placeholder Image" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-label-sm font-label-lg uppercase tracking-wider text-secondary">Placeholder Tag</span>
+                        <h4 class="font-beVietnamPro font-bold text-body-lg text-primary mt-2 line-clamp-2">Placeholder Title Text</h4>
+                        <p class="font-inter text-body-sm text-on-surface-variant mt-2 line-clamp-3">placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder</p>
+                    </div>
+                </div>
+
+                <div class="bg-surface-container rounded-lg overflow-hidden border border-outline-variant transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-xl">
+                    <div class="h-56 overflow-hidden bg-surface-container-high flex justify-center items-start">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png" alt="Placeholder Image" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-label-sm font-label-lg uppercase tracking-wider text-secondary">Placeholder Tag</span>
+                        <h4 class="font-beVietnamPro font-bold text-body-lg text-primary mt-2 line-clamp-2">Placeholder Title Text</h4>
+                        <p class="font-inter text-body-sm text-on-surface-variant mt-2 line-clamp-3">placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-primary-container text-pure-white w-full font-inter">
+        <div class="max-w-container-max mx-auto px-margin-desktop py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-5 space-y-6 flex flex-col items-center text-center mt-4">
+                    <div class="flex items-center gap-4 justify-center">
+                        <img alt="University of San Carlos" class="h-32 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ7Wh2rBnp9OAKiDLxztzWned_5UYHeHRtiSsy0PRwrvoxi7ji7u9eqJdEe8AyUyE-jQKooKgJ0kgQ2RYD1EsV3zqatpWzq_eWwulWUHlh83L9ac6L-VJQSmSWqqVxTttrdzoR0AOWubh070NbIlI0sJgCJhRre7a-JvZw5FPCPxrSzifXbVewndJhmtdG15YGQhRJ3Fmq2oV7s92fwozgjJ-CnV948aFkdvm_tHoccZpxWOOwh-tNYlj_NzRiepCfixQEjjh7BlU">
+                        <div class="border-white/20 flex-1">
+                            <h4 class="font-beVietnamPro text-headline-md font-bold leading-tight uppercase">University of<br>San Carlos</h4>
+                            <p class="font-beVietnamPro text-body-md italic tracking-widest text-secondary-container mt-2 uppercase">Scientia • Virtus • Devotio</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <a class="hover:text-secondary-container transition-colors" href="https://www.facebook.com/usccebu"></a>
+                        <a class="hover:text-secondary-container transition-colors" href="https://twitter.com/uscphilippines"></a>
+                        <a class="hover:text-secondary-container transition-colors" href="https://instagram.com/uscphilippines"></a>
+                        <a class="hover:text-secondary-container transition-colors" href="https://www.youtube.com/@usccebuphilippines"></a>
+                        <a class="hover:text-secondary-container transition-colors" href="https://www.linkedin.com/school/university-of-san-carlos"></a>
+                    </div>
+                </div>
+                <div class="lg:col-span-3">
+                    <h4 class="font-beVietnamPro text-title-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-body-sm text-pure-white/90">
+                        <li><a class="hover:text-secondary-container transition-colors" href="#">About USC</a></li>
+                        <li><a class="hover:text-secondary-container transition-colors" href="#">Academics</a></li>
+                        <li><a class="hover:text-secondary-container transition-colors" href="#">Admission</a></li>
+                        <li><a class="hover:text-secondary-container transition-colors" href="#">Research</a></li>
+                        <li><a class="hover:text-secondary-container transition-colors" href="#">Extension</a></li>
+                        <li><a class="hover:text-secondary-container transition-colors" href="#">Give To USC</a></li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-4 space-y-6">
+                    <h4 class="font-beVietnamPro text-title-lg font-bold mb-6">Contact Details</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary-container mt-1">call</span>
+                            <div class="text-body-sm text-pure-white/90">
+                                <p class="font-bold">Contact Number</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary-container mt-1">mail</span>
+                            <div class="text-body-sm text-pure-white/90">
+                                <p class="font-bold">Email Address</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary-container mt-1">location_on</span>
+                            <div class="text-body-sm text-pure-white/90">
+                                <p class="font-bold">Address</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary py-6 border-t border-white/10">
+            <div class="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-4 text-label-sm text-pure-white/70">
+                <div>
+                    © Copyright 2026 | <a class="hover:text-pure-white underline" href="#">Privacy Notice</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple scroll effect for Navbar
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'shadow-md');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.remove('py-2', 'shadow-md');
+                header.classList.add('py-4');
+            }
+        });
+    </script>
+</body>
+</html>
